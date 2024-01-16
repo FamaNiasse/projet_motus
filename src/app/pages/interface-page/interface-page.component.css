@@ -1,0 +1,40 @@
+main{
+  background: #2B2B2B;
+  height: 100vh;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px; 
+  height: 360px; 
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 60px; 
+  height: 60px; 
+  border: 1px solid #000;
+  box-sizing: border-box; 
+  flex-grow: 1; 
+}
+
+.clavier-item{
+  color: #FFF;
+  text-align: center;
+  font-size: 29.121px;
+  line-height: 60.063px;
+  text-transform: uppercase;
+}
+
+.clavier-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72.803px;
+  height: 72.803px;
+  flex-shrink: 0;
+}
+

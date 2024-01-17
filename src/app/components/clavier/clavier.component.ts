@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SelectionService } from '../../services/selection.service';
 
 @Component({
   selector: 'app-clavier',
@@ -6,13 +7,15 @@ import { Component, Input } from '@angular/core';
   styleUrl: './clavier.component.css'
 })
 export class ClavierComponent {
+  @Output() letterSelected = new EventEmitter<string>();
   @Input() content: string = '';
-  imageSrc: string = '';
 
-  ngOnInit() {
-    // Ajoutez le chemin de l'image en fonction de la lettre
-    this.imageSrc = `assets/images/${this.content.toLowerCase()}.png`;
-    console.log(this.imageSrc);
-    
+  constructor(private selectionService: SelectionService){}
+
+  ngOnInit() {}
+
+  selectLetter(): void {
+    this.selectionService.setLetter(this.content);
+    this.letterSelected.emit(this.content);
   }
 }

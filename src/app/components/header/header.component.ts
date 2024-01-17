@@ -14,9 +14,7 @@ export class HeaderComponent {
 
   openModal() {
     this.modalService.openModal();
-    console.log("la modal est ouverte", this.openModal);
-    
-
+    console.log("la modal est ouverte");
   }
 
   ngOnInit(): void{

@@ -17,14 +17,7 @@ export class ModalComponent {
 
   closeModal(): void{
     this.modalService.closeModal();
-    console.log("modale fermée", this.closeModal);
     
   }
-
-  openModal(): void{
-    this.modalService.openModal();
-    console.log("modale ouverte 2", this.openModal);
-  }
-
 
 }

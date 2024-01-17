@@ -7,13 +7,15 @@
   </div>
 
   <div class="clavier-container">
-    <div *ngFor="let letter of alphabet" class="clavier-item">
-      <app-clavier [content]="letter"></app-clavier>
+    <div *ngFor="let letter of alphabet" class="clavier-item" >
+      <app-clavier [content]="letter" (letterSelected)="handleLetterSelection($event)"></app-clavier>
     </div>
-    <button>supprimer</button>
-    <button>valider</button>
+    <button (click)="deleteSelection()">supprimer</button>
+    <button (click)="validateSelection()">valider</button>
 
   </div>
+
+  <app-modal></app-modal>
   
   
 

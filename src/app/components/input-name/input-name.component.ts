@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserDataService } from '../../services/user-data.service';
+
 
 @Component({
   selector: 'app-input-name',
@@ -6,11 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './input-name.component.css'
 })
 export class InputNameComponent {
-prenom: string = '';
+userName: string = '';
 
-  enregistrerPrenom() {
-    console.log('Prénom enregistré :', this.prenom);
+constructor(private userDataService: UserDataService, private router: Router) {}
 
+  submitName(): void {
+    this.userDataService.setUserName(this.userName);
+    this.router.navigate(['/interface']);
   }
 
 }

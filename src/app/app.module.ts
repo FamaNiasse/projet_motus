@@ -12,6 +12,8 @@ import { GrilleComponent } from './components/grille/grille.component';
 import { ClavierComponent } from './components/clavier/clavier.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { FinalModaleComponent } from './components/final-modale/final-modale.component';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FinalModaleComponent } from './components/final-modale/final-modale.com
     GrilleComponent,
     ClavierComponent,
     RulesComponent,
-    FinalModaleComponent
+    FinalModaleComponent,
+    ModalComponent,
+
   ],
   imports: [
     BrowserModule,

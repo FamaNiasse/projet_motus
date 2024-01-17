@@ -1,0 +1,16 @@
+<div *ngIf="showModal" class="modal-display">
+    <div class="modal">
+        <h1>Règles</h1>
+        <button (click)="closeModal()"><img src="/src/assets/images/4115230_cancel_close_delete_icon 1.svg" alt="close modal"></button>
+        <p>Vous avez six essais pour deviner le mot du jour, entre 6 et 9 lettres, commun à tous.
+            Vous ne pouvez proposer que des mots commençant par la même lettre que le mot recherché, et qui se trouvent
+            dans notre dictionnaire.
+            Les noms propres ne sont pas acceptés.</p>
+        <img src="/src/assets/images/salut.png" alt="exemple jeu">
+        <p>🟥 Les lettres entourées d'un carré rouge sont bien placées
+            🟡 Les lettres entourées d'un cercle jaune sont mal placées (mais présentes dans le mot).
+            🟦 Les lettres qui restent sur fond bleu ne sont pas dans le mot.</p>
+
+    </div>
+
+</div>
